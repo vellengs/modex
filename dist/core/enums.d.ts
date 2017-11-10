@@ -1,0 +1,34 @@
+export declare const DataTypes: {
+    string: string;
+    Date: string;
+    array: string;
+    boolean: string;
+    number: string;
+    object: string;
+};
+export declare const WidgetTypes: {
+    array: string;
+    button: string;
+    date: string;
+    datetime: string;
+    boolean: string;
+    checkbox: string;
+    file: string;
+    input: string;
+    integer: string;
+    object: string;
+    radio: string;
+    range: string;
+    rate: string;
+    select: string;
+    string: string;
+    textarea: string;
+    entry: string;
+    editor: string;
+    dict: string;
+    table: string;
+    picker: string;
+    search: string;
+    tree: string;
+    domain: string;
+};

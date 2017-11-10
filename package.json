@@ -1,0 +1,39 @@
+{
+  "name": "modex",
+  "version": "1.0.3",
+  "description": "Configurable programmer",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vellengs/modex.git"
+  },
+  "keywords": [
+    "node",
+    "typescript",
+    "rest",
+    "swagger",
+    "schema",
+    "mongoose",
+    "mongodb"
+  ],
+  "author": "vellengs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vellengs/modex/issues"
+  },
+  "homepage": "https://github.com/vellengs/modex#readme",
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "mongoose": "^4.9.7",
+    "mongoose-paginate": "^5.0.3",
+    "mongoose-text-search": "0.0.2"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.84",
+    "@types/mongoose": "^4.7.25"
+  }
+}
