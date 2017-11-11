@@ -1,7 +1,7 @@
-import { SchemaDefinition, Schema, model } from "mongoose";
+import { SchemaDefinition, Schema, model } from 'mongoose';
 const textSearch = require('mongoose-text-search'),
-	paginate = require('mongoose-paginate'),
-	fieldsAlias = require('mongoose-aliasfield');
+	paginate = require('mongoose-paginate');
+// fieldsAlias = require('mongoose-aliasfield');
 
 
 export class Entity extends Schema {
@@ -22,8 +22,7 @@ export class Entity extends Schema {
 
 		this.plugin(textSearch);
 		this.plugin(paginate);
-		this.plugin(fieldsAlias);
-
+		// this.plugin(fieldsAlias);
 		model(modelName, this);
 	}
 }
