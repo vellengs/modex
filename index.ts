@@ -1,7 +1,7 @@
 export { Helper } from './core/helper';
 export { PaginateResponse } from './core/paginate';
 export { WidgetTypes, DataTypes } from './core/enums';
-export { SchemaTypes, SchemaDefinition, Schema, model } from "mongoose";
+export { SchemaTypes, SchemaDefinition, Schema, model } from 'mongoose';
 export { create } from './core/creator';
 
 export interface EntityProperties {
@@ -35,8 +35,8 @@ export interface SchemaProperty {
 
 export interface Widget {
 	id: string;
-	[key: string]: any,
-	readOnly?: boolean
+	[key: string]: any;
+	readOnly?: boolean;
 }
 
 export interface ColumnsDefine {
@@ -73,7 +73,6 @@ export interface ColumnItem {
 	minWidth?: number;
 	maxWidth?: number;
 }
-
 
 export interface CondictionVisibleIf {
 	[key: string]: string[];

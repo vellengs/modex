@@ -1,5 +1,5 @@
 /// <reference types="mongoose" />
-import { SchemaDefinition, Schema } from "mongoose";
+import { SchemaDefinition, Schema } from 'mongoose';
 export declare class Entity extends Schema {
     extend(modelName: any, autoIncrease?: boolean): void;
 }
