@@ -1,7 +1,7 @@
 import { model as getModel } from 'mongoose';
 import * as lodash from 'lodash';
-import { UISchema, ColumnItem } from "./schema";
-import { PaginateResponse } from "./paginate";
+import { UISchema, ColumnItem } from './schema';
+import { PaginateResponse } from './paginate';
 
 export interface PaginateOption {
 	select?: Object | string;
@@ -15,11 +15,11 @@ export interface PaginateOption {
 }
 
 export class Helper {
-	static async getUISchema(name: string): Promise<UISchema> {
+	static async getUISchema(folder: string, name: string): Promise<UISchema> {
 		name = lodash.snakeCase(name);
-		const columns: any = require(`./models/${name}.columns`).columns;
-		const schema: any = require(`./models/${name}.properties`).schema;
-		const querySchema: any = require(`./models/${name}.query`).query;
+		const columns: any = require(`${folder}/${name}.columns`).columns;
+		const schema: any = require(`${folder}/${name}.properties`).schema;
+		const querySchema: any = require(`${folder}/${name}.query`).query;
 
 		const cols: ColumnItem[] = [];
 		const required: string[] = [];
