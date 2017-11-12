@@ -12,7 +12,7 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 var mongoose_1 = require("mongoose");
 var textSearch = require('mongoose-text-search'), paginate = require('mongoose-paginate');
-// fieldsAlias = require('mongoose-aliasfield');
+var autoIncrement = require('mongoose-auto-increment');
 var Entity = /** @class */ (function (_super) {
     __extends(Entity, _super);
     function Entity() {
@@ -33,15 +33,16 @@ var Entity = /** @class */ (function (_super) {
         });
         this.plugin(textSearch);
         this.plugin(paginate);
-        // this.plugin(fieldsAlias);
+        if (autoIncrease) {
+            this.plugin(autoIncrement.plugin, modelName);
+        }
         mongoose_1.model(modelName, this);
     };
     return Entity;
 }(mongoose_1.Schema));
 exports.Entity = Entity;
 function create(schemaDefine, name, autoIncrease, strict) {
-    var isStrict = strict !== false;
-    var schema = new Entity(schemaDefine, { strict: isStrict });
+    var schema = new Entity(schemaDefine, { strict: strict !== false });
     schema.extend(name, autoIncrease);
     return schema;
 }

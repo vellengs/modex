@@ -1,12 +1,12 @@
 import { SchemaDefinition, Schema, model } from 'mongoose';
 const textSearch = require('mongoose-text-search'),
 	paginate = require('mongoose-paginate');
-// fieldsAlias = require('mongoose-aliasfield');
+const autoIncrement = require('mongoose-auto-increment');
 
 
 export class Entity extends Schema {
 	extend(modelName: any, autoIncrease?: boolean) {
-		this.method('flat', function () {  //TODO maybe better name pojo;
+		this.method('flat', function () {
 			var obj = this.toObject();
 			obj.id = obj._id;
 			delete obj._id;
@@ -14,7 +14,7 @@ export class Entity extends Schema {
 			return obj;
 		});
 
-		this.method('toDoc', function () { //TODO maybe better name fixUid;
+		this.method('toDoc', function () {
 			var obj = this.toObject();
 			obj.id = obj._id.toString();
 			return obj;
@@ -22,14 +22,16 @@ export class Entity extends Schema {
 
 		this.plugin(textSearch);
 		this.plugin(paginate);
-		// this.plugin(fieldsAlias);
+
+		if (autoIncrease) {
+			this.plugin(autoIncrement.plugin, modelName);
+		}
 		model(modelName, this);
 	}
 }
 
 export function create(schemaDefine: SchemaDefinition, name: string, autoIncrease?: boolean, strict?: boolean) {
-	let isStrict = strict !== false;
-	let schema = new Entity(schemaDefine, { strict: isStrict });
+	const schema = new Entity(schemaDefine, { strict: strict !== false });
 	schema.extend(name, autoIncrease);
 	return schema;
 }

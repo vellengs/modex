@@ -111,10 +111,12 @@ var Helper = /** @class */ (function () {
                 model = mongoose_1.model(modelName);
                 return [2 /*return*/, new Promise(function (resolve, reject) {
                         model.findOne({ _id: id }).exec(function (err, res) {
-                            if (err)
+                            if (err) {
                                 reject(err);
-                            else
-                                resolve(res);
+                            }
+                            else {
+                                resolve(true);
+                            }
                         });
                     })];
             });
@@ -132,10 +134,12 @@ var Helper = /** @class */ (function () {
                 else {
                     return [2 /*return*/, new Promise(function (resolve, reject) {
                             model.findOneAndRemove({ _id: id }).exec(function (err, res) {
-                                if (err)
+                                if (err) {
                                     reject(err);
-                                else
+                                }
+                                else {
                                     resolve(true);
+                                }
                             });
                         })];
                 }
@@ -150,10 +154,12 @@ var Helper = /** @class */ (function () {
                 model = mongoose_1.model(modelName);
                 return [2 /*return*/, new Promise(function (resolve, reject) {
                         model.remove({ _id: { $in: ids } }).exec(function (err, res) {
-                            if (err)
+                            if (err) {
                                 reject(err);
-                            else
+                            }
+                            else {
                                 resolve(true);
+                            }
                         });
                     })];
             });
@@ -168,11 +174,11 @@ var Helper = /** @class */ (function () {
                         option = {
                             page: page,
                             limit: limit,
-                            sort: { "_id": -1 }
+                            sort: { '_id': -1 }
                         };
                         option.page = option.page ? option.page : 1;
                         option.limit = option.limit === 0 ? 10 : option.limit;
-                        option.sort = option.sort ? { "_id": -1 } : option.sort;
+                        option.sort = option.sort ? { '_id': -1 } : option.sort;
                         if (populates && populates.length) {
                             option.populate = populates;
                         }
