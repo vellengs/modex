@@ -40,14 +40,14 @@ var lodash = require("lodash");
 var Helper = /** @class */ (function () {
     function Helper() {
     }
-    Helper.getUISchema = function (name) {
+    Helper.getUISchema = function (folder, name) {
         return __awaiter(this, void 0, void 0, function () {
             var columns, schema, querySchema, cols, required, key, col, key, config, key, config;
             return __generator(this, function (_a) {
                 name = lodash.snakeCase(name);
-                columns = require("./models/" + name + ".columns").columns;
-                schema = require("./models/" + name + ".properties").schema;
-                querySchema = require("./models/" + name + ".query").query;
+                columns = require(folder + "/" + name + ".columns").columns;
+                schema = require(folder + "/" + name + ".properties").schema;
+                querySchema = require(folder + "/" + name + ".query").query;
                 cols = [];
                 required = [];
                 for (key in columns) {

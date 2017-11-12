@@ -1,5 +1,5 @@
-import { UISchema } from "./schema";
-import { PaginateResponse } from "./paginate";
+import { UISchema } from './schema';
+import { PaginateResponse } from './paginate';
 export interface PaginateOption {
     select?: Object | string;
     sort?: Object | string;
@@ -11,7 +11,7 @@ export interface PaginateOption {
     limit?: number;
 }
 export declare class Helper {
-    static getUISchema(name: string): Promise<UISchema>;
+    static getUISchema(folder: string, name: string): Promise<UISchema>;
     static create(modelName: string, entry: any): Promise<any>;
     static update(modelName: string, entry: any): Promise<any>;
     static get(modelName: string, id: string): Promise<any>;

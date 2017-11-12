@@ -1,11 +1,12 @@
 {
   "name": "modex",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Configurable programmer",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsc"
   },
   "repository": {
     "type": "git",
@@ -34,6 +35,7 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.84",
-    "@types/mongoose": "^4.7.25"
+    "@types/mongoose": "^4.7.25",
+    "rimraf": "^2.6.2"
   }
 }

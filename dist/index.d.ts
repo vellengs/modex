@@ -1,7 +1,7 @@
 export { Helper } from './core/helper';
 export { PaginateResponse } from './core/paginate';
 export { WidgetTypes, DataTypes } from './core/enums';
-export { SchemaTypes, SchemaDefinition, Schema, model } from "mongoose";
+export { SchemaTypes, SchemaDefinition, Schema, model } from 'mongoose';
 export { create } from './core/creator';
 export interface EntityProperties {
     [key: string]: SchemaProperty;
