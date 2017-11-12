@@ -77,10 +77,11 @@ export class Helper {
 		return new Promise((resolve, reject) => {
 
 			model.findOne({ _id: id }).exec((err, res) => {
-				if (err)
+				if (err) {
 					reject(err);
-				else
-					resolve(res);
+				} else {
+					resolve(true);
+				}
 			});
 		});
 	}
@@ -93,10 +94,11 @@ export class Helper {
 		} else {
 			return new Promise((resolve, reject) => {
 				model.findOneAndRemove({ _id: id }).exec((err, res) => {
-					if (err)
+					if (err) {
 						reject(err);
-					else
+					} else {
 						resolve(true);
+					}
 				});
 			});
 		}
@@ -106,10 +108,11 @@ export class Helper {
 		const model = getModel(modelName);
 		return new Promise((resolve, reject) => {
 			model.remove({ _id: { $in: ids } }).exec((err, res) => {
-				if (err)
+				if (err) {
 					reject(err);
-				else
+				} else {
 					resolve(true);
+				}
 			});
 		});
 	}
@@ -123,15 +126,15 @@ export class Helper {
 		params?: object
 	) {
 
-		let option: PaginateOption = {
+		const option: PaginateOption = {
 			page: page,
 			limit: limit,
-			sort: { "_id": -1 }
+			sort: { '_id': -1 }
 		};
 
 		option.page = option.page ? option.page : 1;
 		option.limit = option.limit === 0 ? 10 : option.limit;
-		option.sort = option.sort ? { "_id": -1 } : option.sort;
+		option.sort = option.sort ? { '_id': -1 } : option.sort;
 
 		if (populates && populates.length) {
 			option.populate = populates;
@@ -149,7 +152,7 @@ export class Helper {
 					error: err,
 					docs: data.docs.map((doc: any) => doc.toClient()),
 					total: data.total
-				}
+				};
 				resolve(result);
 			});
 		});
