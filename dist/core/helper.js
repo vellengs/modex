@@ -190,7 +190,7 @@ var Helper = /** @class */ (function () {
                                     data = data || { docs: [], total: 0 };
                                     var result = {
                                         error: err,
-                                        docs: data.docs.map(function (doc) { return doc.toClient(); }),
+                                        docs: data.docs.map(function (doc) { return doc.flat(); }),
                                         total: data.total
                                     };
                                     resolve(result);
