@@ -150,7 +150,7 @@ export class Helper {
 				data = data || { docs: [], total: 0 };
 				const result: PaginateResponse<T[]> = {
 					error: err,
-					docs: data.docs.map((doc: any) => doc.toClient()),
+					docs: data.docs.map((doc: any) => doc.flat()),
 					total: data.total
 				};
 				resolve(result);
