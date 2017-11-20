@@ -21,7 +21,8 @@ var Entity = /** @class */ (function (_super) {
     Entity.prototype.extend = function (modelName, autoIncrease) {
         this.method('flat', function () {
             var obj = this.toObject();
-            obj.id = obj._id;
+            // obj.id = obj._id;
+            obj.uid = obj._id;
             delete obj._id;
             delete obj._v;
             return obj;

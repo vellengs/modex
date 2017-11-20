@@ -7,15 +7,16 @@ const autoIncrement = require('mongoose-auto-increment');
 export class Entity extends Schema {
 	extend(modelName: any, autoIncrease?: boolean) {
 		this.method('flat', function () {
-			var obj = this.toObject();
-			obj.id = obj._id;
+			const obj = this.toObject();
+			// obj.id = obj._id;
+			obj.uid = obj._id;
 			delete obj._id;
 			delete obj._v;
 			return obj;
 		});
 
 		this.method('toDoc', function () {
-			var obj = this.toObject();
+			const obj = this.toObject();
 			obj.id = obj._id.toString();
 			return obj;
 		});

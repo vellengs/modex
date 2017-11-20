@@ -16,3 +16,13 @@ export declare class PaginateResponse<T> {
     docs: T;
     total: number;
 }
+export interface PaginateOption {
+    select?: Object | string;
+    sort?: Object | string;
+    populate?: any[] | Object | String;
+    lean?: boolean;
+    leanWithId?: boolean;
+    offset?: number;
+    page?: number;
+    limit?: number;
+}

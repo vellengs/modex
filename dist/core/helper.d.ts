@@ -1,15 +1,5 @@
 import { UISchema } from './schema';
 import { PaginateResponse } from './paginate';
-export interface PaginateOption {
-    select?: Object | string;
-    sort?: Object | string;
-    populate?: any[] | Object | String;
-    lean?: boolean;
-    leanWithId?: boolean;
-    offset?: number;
-    page?: number;
-    limit?: number;
-}
 export declare class Helper {
     static getUISchema(folder: string, name: string): Promise<UISchema>;
     static create(modelName: string, entry: any): Promise<any>;

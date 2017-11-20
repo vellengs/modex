@@ -1,18 +1,8 @@
 import { model as getModel } from 'mongoose';
 import * as lodash from 'lodash';
 import { UISchema, ColumnItem } from './schema';
-import { PaginateResponse } from './paginate';
+import { PaginateResponse, PaginateOption } from './paginate';
 
-export interface PaginateOption {
-	select?: Object | string;
-	sort?: Object | string;
-	populate?: any[] | Object | String;
-	lean?: boolean;
-	leanWithId?: boolean;
-	offset?: number;
-	page?: number;
-	limit?: number;
-}
 
 export class Helper {
 	static async getUISchema(folder: string, name: string): Promise<UISchema> {
