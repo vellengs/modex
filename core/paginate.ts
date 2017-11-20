@@ -8,9 +8,9 @@ export declare class Paginate {
 }
 
 export declare class Error {
-    code?: string
-    message?: string
-    [key: string]: any
+    code?: string;
+    message?: string;
+    [key: string]: any;
 }
 
 
