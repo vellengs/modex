@@ -115,7 +115,7 @@ var Helper = /** @class */ (function () {
                                 reject(err);
                             }
                             else {
-                                resolve(true);
+                                resolve(res);
                             }
                         });
                     })];
