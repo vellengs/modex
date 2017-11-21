@@ -70,7 +70,7 @@ export class Helper {
 				if (err) {
 					reject(err);
 				} else {
-					resolve(true);
+					resolve(res);
 				}
 			});
 		});
