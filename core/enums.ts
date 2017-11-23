@@ -11,6 +11,7 @@ export const WidgetTypes = {
 	array: 'array',
 	button: 'button',
 	date: 'date',
+	dateRange: 'dateRange',
 	datetime: 'datetime',
 	boolean: 'boolean',
 	checkbox: 'checkbox',
@@ -31,5 +32,9 @@ export const WidgetTypes = {
 	picker: 'picker',
 	search: 'search',
 	tree: 'tree',
-	domain: 'domain'
-}
+	domain: 'domain',
+	grid: 'grid',
+	steps: 'steps',
+	tabs: 'tabs',
+	dialog: 'dialog'
+} 
