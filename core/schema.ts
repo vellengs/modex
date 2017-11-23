@@ -2,11 +2,18 @@ export interface EntityProperties {
 	[key: string]: SchemaProperty;
 }
 
+export interface SchemaForm {
+	add: Widget,
+	edit: Widget,
+	view: Widget
+}
+
 export interface UISchema {
 	entry: EntityProperties;
 	query?: EntityProperties;
 	required?: string[];
 	columns: ColumnItem[];
+	forms: SchemaForm
 }
 
 export interface SchemaProperty {
@@ -30,6 +37,7 @@ export interface SchemaProperty {
 export interface Widget {
 	id: string;
 	[key: string]: any,
+	parts?: any,
 	readOnly?: boolean
 }
 

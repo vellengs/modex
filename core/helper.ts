@@ -9,6 +9,8 @@ export class Helper {
 		name = lodash.snakeCase(name);
 		const columns: any = require(`${folder}/${name}.columns`).columns;
 		const schema: any = require(`${folder}/${name}.properties`).schema;
+		const forms: any = require(`${folder}/${name}.properties`).forms;
+
 		const querySchema: any = require(`${folder}/${name}.query`).query;
 
 		const cols: ColumnItem[] = [];
@@ -46,7 +48,8 @@ export class Helper {
 			entry: schema,
 			query: querySchema,
 			required: required,
-			columns: cols
+			columns: cols,
+			forms: forms
 		};
 	}
 
