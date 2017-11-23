@@ -12,6 +12,7 @@ exports.WidgetTypes = {
     array: 'array',
     button: 'button',
     date: 'date',
+    dateRange: 'dateRange',
     datetime: 'datetime',
     boolean: 'boolean',
     checkbox: 'checkbox',
@@ -32,6 +33,10 @@ exports.WidgetTypes = {
     picker: 'picker',
     search: 'search',
     tree: 'tree',
-    domain: 'domain'
+    domain: 'domain',
+    grid: 'grid',
+    steps: 'steps',
+    tabs: 'tabs',
+    dialog: 'dialog'
 };
 //# sourceMappingURL=enums.js.map

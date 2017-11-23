@@ -10,6 +10,7 @@ export declare const WidgetTypes: {
     array: string;
     button: string;
     date: string;
+    dateRange: string;
     datetime: string;
     boolean: string;
     checkbox: string;
@@ -31,4 +32,8 @@ export declare const WidgetTypes: {
     search: string;
     tree: string;
     domain: string;
+    grid: string;
+    steps: string;
+    tabs: string;
+    dialog: string;
 };

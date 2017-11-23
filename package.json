@@ -1,6 +1,6 @@
 {
   "name": "modex",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "Configurable programmer",
   "main": "dist/index.js",
   "scripts": {
