@@ -74,6 +74,7 @@ export interface ColumnItem {
 	width?: number;
 	minWidth?: number;
 	maxWidth?: number;
+	link?: string;
 }
 
 

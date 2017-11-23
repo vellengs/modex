@@ -42,11 +42,12 @@ var Helper = /** @class */ (function () {
     }
     Helper.getUISchema = function (folder, name) {
         return __awaiter(this, void 0, void 0, function () {
-            var columns, schema, querySchema, cols, required, key, col, key, config, key, config;
+            var columns, schema, forms, querySchema, cols, required, key, col, key, config, key, config;
             return __generator(this, function (_a) {
                 name = lodash.snakeCase(name);
                 columns = require(folder + "/" + name + ".columns").columns;
                 schema = require(folder + "/" + name + ".properties").schema;
+                forms = require(folder + "/" + name + ".properties").forms;
                 querySchema = require(folder + "/" + name + ".query").query;
                 cols = [];
                 required = [];
@@ -79,7 +80,8 @@ var Helper = /** @class */ (function () {
                         entry: schema,
                         query: querySchema,
                         required: required,
-                        columns: cols
+                        columns: cols,
+                        forms: forms
                     }];
             });
         });
