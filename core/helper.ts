@@ -1,6 +1,6 @@
 import { model as getModel } from 'mongoose';
 import * as lodash from 'lodash';
-import { UISchema, ColumnItem } from './schema';
+import { UISchema, ColumnItem } from './../';
 import { PaginateResponse, PaginateOption } from './paginate';
 
 

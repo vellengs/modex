@@ -13,6 +13,7 @@ export interface UISchema {
 	query?: EntityProperties;
 	required?: string[];
 	columns: ColumnItem[];
+	forms: SchemaForm;
 }
 
 export interface SchemaProperty {
@@ -72,8 +73,15 @@ export interface ColumnItem {
 	width?: number;
 	minWidth?: number;
 	maxWidth?: number;
+	link?: string;
 }
 
 export interface CondictionVisibleIf {
-	[key: string]: string[];
+	[key: string]: any;
+}
+
+export interface SchemaForm {
+	add: Widget,
+	edit: Widget,
+	view: Widget
 }

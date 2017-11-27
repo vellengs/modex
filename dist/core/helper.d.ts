@@ -1,4 +1,4 @@
-import { UISchema } from './schema';
+import { UISchema } from './../';
 import { PaginateResponse } from './paginate';
 export declare class Helper {
     static getUISchema(folder: string, name: string): Promise<UISchema>;
