@@ -29,6 +29,7 @@ export interface SchemaProperty {
     items?: any;
     placeholder?: string;
     required?: boolean;
+    default?: any;
 }
 export interface Widget {
     id: string;
