@@ -13,7 +13,7 @@ export interface UISchema {
 	query?: EntityProperties;
 	required?: string[];
 	columns: ColumnItem[];
-	forms: SchemaForm;
+	forms?: SchemaForm;
 }
 
 export interface SchemaProperty {
