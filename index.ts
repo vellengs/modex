@@ -32,6 +32,7 @@ export interface SchemaProperty {
 	items?: any;
 	placeholder?: string;
 	required?: boolean;
+	default?: any;
 }
 
 export interface Widget {
@@ -81,7 +82,7 @@ export interface CondictionVisibleIf {
 }
 
 export interface SchemaForm {
-	add: Widget,
-	edit: Widget,
-	view: Widget
+	add: Widget;
+	edit: Widget;
+	view: Widget;
 }
