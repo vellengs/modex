@@ -13,7 +13,7 @@ export interface UISchema {
 	query?: EntityProperties;
 	required?: string[];
 	columns: ColumnItem[];
-	forms?: SchemaForm;
+	forms?: SchemaForms;
 }
 
 export interface SchemaProperty {
@@ -35,11 +35,7 @@ export interface SchemaProperty {
 	default?: any;
 }
 
-export interface Widget {
-	id: string;
-	[key: string]: any;
-	readOnly?: boolean;
-}
+
 
 export interface ColumnsDefine {
 	[key: string]: ColumnItem;
@@ -81,8 +77,17 @@ export interface CondictionVisibleIf {
 	[key: string]: any;
 }
 
-export interface SchemaForm {
-	add: Widget;
-	edit: Widget;
-	view: Widget;
+export interface SchemaForms {
+	add?: SchemaProperty;
+	edit?: SchemaProperty;
+	view?: SchemaProperty;
+}
+
+export interface Widget {
+	id: string;
+	parts: {
+		[key: number]: string[];
+	}
+	readOnly?: boolean;
+	[key: string]: any;
 }
