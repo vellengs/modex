@@ -85,9 +85,9 @@ export interface SchemaForms {
 
 export interface Widget {
 	id: string;
-	parts: {
+	parts?: {
 		[key: number]: string[];
-	}
+	};
 	readOnly?: boolean;
 	[key: string]: any;
 }
