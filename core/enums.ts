@@ -36,5 +36,6 @@ export const WidgetTypes = {
 	grid: 'grid',
 	steps: 'steps',
 	tabs: 'tabs',
-	dialog: 'dialog'
+	dialog: 'dialog',
+	time: 'time'
 } 

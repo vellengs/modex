@@ -57,7 +57,7 @@ export interface ColumnItem {
 	filterMaxlength?: string;
 	rowspan?: string;
 	colspan?: string;
-	style?: string;
+	style?: object;
 	styleClass?: string;
 	tableStyle?: string;
 	tableStyleClass?: string;
