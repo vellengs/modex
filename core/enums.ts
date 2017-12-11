@@ -1,6 +1,6 @@
 export const DataTypes = {
 	string: 'string',
-	Date: 'string',
+	Date: 'Date',
 	array: 'array',
 	boolean: 'boolean',
 	number: 'number',
@@ -8,13 +8,14 @@ export const DataTypes = {
 }
 
 export const WidgetTypes = {
+	boolean: 'boolean',
+	checkbox: 'checkbox',
 	array: 'array',
 	button: 'button',
+	time: 'time',
 	date: 'date',
 	dateRange: 'dateRange',
 	datetime: 'datetime',
-	boolean: 'boolean',
-	checkbox: 'checkbox',
 	file: 'file',
 	input: 'input',
 	integer: 'integer',
@@ -36,6 +37,5 @@ export const WidgetTypes = {
 	grid: 'grid',
 	steps: 'steps',
 	tabs: 'tabs',
-	dialog: 'dialog',
-	time: 'time'
+	dialog: 'dialog'
 } 
