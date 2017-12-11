@@ -7,13 +7,14 @@ export declare const DataTypes: {
     object: string;
 };
 export declare const WidgetTypes: {
+    boolean: string;
+    checkbox: string;
     array: string;
     button: string;
+    time: string;
     date: string;
     dateRange: string;
     datetime: string;
-    boolean: string;
-    checkbox: string;
     file: string;
     input: string;
     integer: string;

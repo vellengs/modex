@@ -9,13 +9,14 @@ exports.DataTypes = {
     object: 'object'
 };
 exports.WidgetTypes = {
+    boolean: 'boolean',
+    checkbox: 'checkbox',
     array: 'array',
     button: 'button',
+    time: 'time',
     date: 'date',
     dateRange: 'dateRange',
     datetime: 'datetime',
-    boolean: 'boolean',
-    checkbox: 'checkbox',
     file: 'file',
     input: 'input',
     integer: 'integer',

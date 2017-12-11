@@ -35,10 +35,12 @@ export interface SchemaProperty {
 	default?: any;
 }
 
-
-
 export interface ColumnsDefine {
 	[key: string]: ColumnItem;
+}
+
+export interface StyleObject {
+	[key: string]: any;
 }
 
 export interface ColumnItem {
@@ -57,7 +59,7 @@ export interface ColumnItem {
 	filterMaxlength?: string;
 	rowspan?: string;
 	colspan?: string;
-	style?: object;
+	style?: StyleObject;
 	styleClass?: string;
 	tableStyle?: string;
 	tableStyleClass?: string;

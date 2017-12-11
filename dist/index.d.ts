@@ -34,6 +34,9 @@ export interface SchemaProperty {
 export interface ColumnsDefine {
     [key: string]: ColumnItem;
 }
+export interface StyleObject {
+    [key: string]: any;
+}
 export interface ColumnItem {
     field?: string;
     sortField?: string;
@@ -50,7 +53,7 @@ export interface ColumnItem {
     filterMaxlength?: string;
     rowspan?: string;
     colspan?: string;
-    style?: string;
+    style?: StyleObject;
     styleClass?: string;
     tableStyle?: string;
     tableStyleClass?: string;

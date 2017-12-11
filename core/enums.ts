@@ -1,6 +1,6 @@
 export const DataTypes = {
 	string: 'string',
-	Date: 'Date',
+	Date: 'string',
 	array: 'array',
 	boolean: 'boolean',
 	number: 'number',
