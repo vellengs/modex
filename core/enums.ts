@@ -1,3 +1,4 @@
+// tslint:disable-next-line:variable-name
 export const DataTypes = {
 	string: 'string',
 	Date: 'string',
@@ -5,8 +6,9 @@ export const DataTypes = {
 	boolean: 'boolean',
 	number: 'number',
 	object: 'object'
-}
+};
 
+// tslint:disable-next-line:variable-name
 export const WidgetTypes = {
 	boolean: 'boolean',
 	checkbox: 'checkbox',
@@ -38,4 +40,4 @@ export const WidgetTypes = {
 	steps: 'steps',
 	tabs: 'tabs',
 	dialog: 'dialog'
-} 
+};
