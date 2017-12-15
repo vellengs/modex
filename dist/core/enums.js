@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+// tslint:disable-next-line:variable-name
 exports.DataTypes = {
     string: 'string',
     Date: 'string',
@@ -8,6 +9,7 @@ exports.DataTypes = {
     number: 'number',
     object: 'object'
 };
+// tslint:disable-next-line:variable-name
 exports.WidgetTypes = {
     boolean: 'boolean',
     checkbox: 'checkbox',
