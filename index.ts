@@ -26,13 +26,14 @@ export interface SchemaProperty {
 	minlength?: number;
 	maxlength?: number;
 	visibleIf?: CondictionVisibleIf;
-	partten?: string;
+	pattern?: string;
 	index?: string;
 	format?: string;
 	items?: any;
 	placeholder?: string;
 	required?: boolean;
 	default?: any;
+	validationMessage?: string;
 }
 
 export interface ColumnsDefine {
