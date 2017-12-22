@@ -30,6 +30,7 @@ export interface SchemaProperty {
     placeholder?: string;
     required?: boolean;
     default?: any;
+    readOnly?: boolean;
     validationMessage?: string;
 }
 export interface ColumnsDefine {
