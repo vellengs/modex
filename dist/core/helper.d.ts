@@ -1,5 +1,5 @@
 import { UISchema } from './../';
-import { PaginateResponse } from './paginate';
+import { PaginateResponse } from './../types';
 export declare class Helper {
     static getUISchema(folder: string, name: string): Promise<UISchema>;
     static create(modelName: string, entry: any): Promise<any>;

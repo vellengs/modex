@@ -1,5 +1,5 @@
 {
-  "name": "modex",
+  "name": "modelrx",
   "version": "1.0.33",
   "description": "Configurable programmer",
   "main": "dist/index.js",
@@ -27,9 +27,6 @@
     "url": "https://github.com/vellengs/modex/issues"
   },
   "homepage": "https://github.com/vellengs/modex#readme",
-  "dependencies": {
-    "lodash": "^4.17.4"
-  },
   "devDependencies": {
     "@types/lodash": "^4.14.84",
     "@types/mongoose": "^4.7.25",

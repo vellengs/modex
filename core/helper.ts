@@ -1,8 +1,7 @@
 import { model as getModel } from 'mongoose';
 import * as lodash from 'lodash';
 import { UISchema, ColumnItem } from './../';
-import { PaginateResponse, PaginateOption } from './paginate';
-
+import { PaginateResponse, PaginateOption } from './../types';
 
 export class Helper {
 	static async getUISchema(folder: string, name: string): Promise<UISchema> {
