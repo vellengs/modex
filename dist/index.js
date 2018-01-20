@@ -4,6 +4,7 @@ var helper_1 = require("./core/helper");
 exports.Helper = helper_1.Helper;
 var creator_1 = require("./core/creator");
 exports.create = creator_1.create;
+exports.createEntity = creator_1.createEntity;
 var mongoose_1 = require("mongoose");
 exports.SchemaTypes = mongoose_1.SchemaTypes;
 exports.Schema = mongoose_1.Schema;

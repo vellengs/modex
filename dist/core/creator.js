@@ -48,4 +48,9 @@ function create(schemaDefine, name, autoIncrease, strict) {
     return schema;
 }
 exports.create = create;
+function createEntity(schemaDefine, strict) {
+    var schema = new Entity(schemaDefine, { strict: strict !== false });
+    return schema;
+}
+exports.createEntity = createEntity;
 //# sourceMappingURL=creator.js.map

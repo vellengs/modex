@@ -1,5 +1,5 @@
 export { Helper } from './core/helper';
-export { create } from './core/creator';
+export { create, createEntity } from './core/creator';
 export { SchemaTypes, SchemaDefinition, Schema, model } from 'mongoose';
 
 export {

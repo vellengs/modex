@@ -36,3 +36,8 @@ export function create(schemaDefine: SchemaDefinition, name: string, autoIncreas
 	schema.extend(name, autoIncrease);
 	return schema;
 }
+
+export function createEntity(schemaDefine: SchemaDefinition, strict?: boolean) {
+	const schema = new Entity(schemaDefine, { strict: strict !== false });
+	return schema;
+}
