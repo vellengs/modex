@@ -2,16 +2,14 @@ import { SchemaDefinition, Schema, model } from 'mongoose';
 const textSearch = require('mongoose-text-search'),
 	paginate = require('mongoose-paginate');
 const autoIncrement = require('mongoose-auto-increment');
+const toJson = require('@meanie/mongoose-to-json');
 
 
 export class Entity extends Schema {
 	extend(modelName: any, autoIncrease?: boolean) {
 		this.method('flat', function () {
-			const obj = this.toObject();
-			// obj.id = obj._id;
-			obj.uid = obj._id;
-			delete obj._id;
-			delete obj._v;
+			const obj = this.toJSON();
+			obj.uid = obj.id;
 			return obj;
 		});
 
@@ -23,6 +21,7 @@ export class Entity extends Schema {
 
 		this.plugin(textSearch);
 		this.plugin(paginate);
+		this.plugin(toJson);
 
 		if (autoIncrease) {
 			this.plugin(autoIncrement.plugin, modelName);

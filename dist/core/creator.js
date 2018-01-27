@@ -13,6 +13,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var mongoose_1 = require("mongoose");
 var textSearch = require('mongoose-text-search'), paginate = require('mongoose-paginate');
 var autoIncrement = require('mongoose-auto-increment');
+var toJson = require('@meanie/mongoose-to-json');
 var Entity = /** @class */ (function (_super) {
     __extends(Entity, _super);
     function Entity() {
@@ -20,11 +21,8 @@ var Entity = /** @class */ (function (_super) {
     }
     Entity.prototype.extend = function (modelName, autoIncrease) {
         this.method('flat', function () {
-            var obj = this.toObject();
-            // obj.id = obj._id;
-            obj.uid = obj._id;
-            delete obj._id;
-            delete obj._v;
+            var obj = this.toJSON();
+            obj.uid = obj.id;
             return obj;
         });
         this.method('toDoc', function () {
@@ -34,6 +32,7 @@ var Entity = /** @class */ (function (_super) {
         });
         this.plugin(textSearch);
         this.plugin(paginate);
+        this.plugin(toJson);
         if (autoIncrease) {
             this.plugin(autoIncrement.plugin, modelName);
         }
