@@ -55,6 +55,7 @@ export interface SchemaProperty {
     default?: any;
     readOnly?: boolean;
     validationMessage?: string;
+    oneOf?: any;
 }
 export interface ColumnsDefine {
     [key: string]: ColumnItem;
