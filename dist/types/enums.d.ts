@@ -1,40 +1,40 @@
-export declare const DataTypes: {
-    string: string;
-    Date: string;
-    array: string;
-    boolean: string;
-    number: string;
-    object: string;
-};
-export declare const WidgetTypes: {
-    boolean: string;
-    checkbox: string;
-    array: string;
-    button: string;
-    time: string;
-    date: string;
-    dateRange: string;
-    datetime: string;
-    file: string;
-    input: string;
-    integer: string;
-    object: string;
-    radio: string;
-    range: string;
-    rate: string;
-    select: string;
-    string: string;
-    textarea: string;
-    entry: string;
-    editor: string;
-    dict: string;
-    table: string;
-    picker: string;
-    search: string;
-    tree: string;
-    domain: string;
-    grid: string;
-    steps: string;
-    tabs: string;
-    dialog: string;
-};
+export declare enum DataTypes {
+    string = "string",
+    Date = "string",
+    array = "array",
+    boolean = "boolean",
+    number = "number",
+    object = "object",
+}
+export declare enum WidgetTypes {
+    boolean = "boolean",
+    checkbox = "checkbox",
+    array = "array",
+    button = "button",
+    time = "time",
+    date = "date",
+    dateRange = "dateRange",
+    datetime = "datetime",
+    file = "file",
+    input = "input",
+    integer = "integer",
+    object = "object",
+    radio = "radio",
+    range = "range",
+    rate = "rate",
+    select = "select",
+    string = "string",
+    textarea = "textarea",
+    entry = "entry",
+    editor = "editor",
+    dict = "dict",
+    table = "table",
+    picker = "picker",
+    search = "search",
+    tree = "tree",
+    domain = "domain",
+    grid = "grid",
+    steps = "steps",
+    tabs = "tabs",
+    dialog = "dialog",
+}
