@@ -37,14 +37,14 @@ export interface UISchema {
     forms?: SchemaForms;
 }
 export interface SchemaProperty {
+    [key: string]: any;
     type?: string;
     title?: string;
     description?: string;
     widget?: string | Widget;
     minimum?: number;
     maximum?: number;
-    minlength?: number;
-    maxlength?: number;
+    minLength?: number;
     visibleIf?: CondictionVisibleIf;
     pattern?: string;
     index?: string;
@@ -64,6 +64,8 @@ export interface StyleObject {
     [key: string]: any;
 }
 export interface ColumnItem {
+    [key: string]: any;
+    control?: string;
     field?: string;
     sortField?: string;
     filterField?: string;
@@ -76,7 +78,7 @@ export interface ColumnItem {
     filterMatchMode?: string;
     filterType?: string;
     filterPlaceholder?: string;
-    filterMaxlength?: string;
+    filterMaxLength?: string;
     rowspan?: string;
     colspan?: string;
     style?: StyleObject;

@@ -68,7 +68,7 @@ export class Helper {
 		const model = getModel(modelName);
 		return new Promise((resolve, reject) => {
 
-			model.findOne({ _id: id }).exec((err, res) => {
+			model.findOne({ _id: id }).exec((err: any, res: any) => {
 				if (err) {
 					reject(err);
 				} else {
@@ -85,7 +85,7 @@ export class Helper {
 			return this.removeItems(modelName, ids);
 		} else {
 			return new Promise((resolve, reject) => {
-				model.findOneAndRemove({ _id: id }).exec((err, res) => {
+				model.findOneAndRemove({ _id: id }).exec((err: any, res: any) => {
 					if (err) {
 						reject(err);
 					} else {
@@ -99,7 +99,7 @@ export class Helper {
 	static async removeItems(modelName: string, ids: string[]): Promise<any> {
 		const model = getModel(modelName);
 		return new Promise((resolve, reject) => {
-			model.remove({ _id: { $in: ids } }).exec((err, res) => {
+			model.remove({ _id: { $in: ids } }).exec((err: any, res: any) => {
 				if (err) {
 					reject(err);
 				} else {
