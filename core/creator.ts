@@ -1,7 +1,5 @@
 import { SchemaDefinition, Schema, model } from 'mongoose';
-const textSearch = require('mongoose-text-search'),
-	paginate = require('mongoose-paginate');
-const autoIncrement = require('mongoose-auto-increment');
+const paginate = require('mongoose-paginate');
 const toJson = require('@meanie/mongoose-to-json');
 
 
@@ -19,13 +17,8 @@ export class Entity extends Schema {
 			return obj;
 		});
 
-		this.plugin(textSearch);
 		this.plugin(paginate);
 		this.plugin(toJson);
-
-		if (autoIncrease) {
-			this.plugin(autoIncrement.plugin, modelName);
-		}
 		model(modelName, this);
 	}
 }
